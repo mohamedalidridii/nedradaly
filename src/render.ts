@@ -227,7 +227,12 @@ function contact() {
   return `
   <section class="contact" data-theme="dark" id="contact">
     <p class="kicker" data-reveal><span>07</span>Contact</p>
-    <h2 class="contact__title" data-split>Let’s build something <em>sustainable.</em></h2>
+    <div class="contact__main">
+      <h2 class="contact__title" data-split>Let’s build something <em>sustainable.</em></h2>
+      <figure class="contact__portrait" data-gl="displace" data-cursor="Say hi">
+        <img src="/images/headshot.webp" alt="Portrait of Nedra Daly" width="462" height="577" loading="lazy" />
+      </figure>
+    </div>
     <div class="contact__ctas">
       <a class="pill pill--solid" href="${LINKEDIN}" target="_blank" rel="noopener" data-magnetic>
         <span>Message on LinkedIn</span>${arrow}

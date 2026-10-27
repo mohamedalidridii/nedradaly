@@ -52,7 +52,6 @@ export function initMediaReveals(gl: GL | null) {
       start: 'top 92%',
       // The horizontal gallery moves sideways, so reveal those once the section arrives.
       ...(el.closest('.world') && matchMedia(DESKTOP).matches ? { trigger: '.world', start: 'top 60%' } : {}),
-      once: true,
       onEnter: () => gsap.to(u.uReveal, { value: 1, duration: 2.2, ease: 'power2.out', delay: Math.random() * 0.25 }),
     });
   });
@@ -122,7 +121,7 @@ export function initSdg(motion: boolean) {
     stagger: { each: 0.05, from: 'start' },
     ease: 'expo.out',
     clearProps: 'opacity,strokeWidth',
-    scrollTrigger: { trigger: '.sdg__ring', start: 'top 75%', once: true },
+    scrollTrigger: { trigger: '.sdg__ring', start: 'top 75%', toggleActions: 'play none none none' },
   });
   gsap.fromTo(
     '.sdg__svg',
@@ -154,7 +153,7 @@ export function initStories() {
   gsap.utils.toArray<HTMLElement>('[data-ink]').forEach((fig, i) => {
     const img = fig.querySelector('img');
     gsap
-      .timeline({ scrollTrigger: { trigger: fig, start: 'top 85%', once: true } })
+      .timeline({ scrollTrigger: { trigger: fig, start: 'top 85%', toggleActions: 'play none none none' } })
       .fromTo(
         fig,
         { clipPath: 'polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)' },

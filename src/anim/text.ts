@@ -43,7 +43,7 @@ export function initTextReveals() {
           duration: 1.4,
           stagger: 0.09,
           ease: 'expo.out',
-          scrollTrigger: { trigger: el, start: 'top 86%', once: true },
+          scrollTrigger: { trigger: el, start: 'top 86%', toggleActions: 'play none none none' },
         }),
     });
   });
@@ -55,7 +55,7 @@ export function initTextReveals() {
       autoAlpha: 0,
       duration: 1.2,
       ease: 'expo.out',
-      scrollTrigger: { trigger: el, start: 'top 90%', once: true },
+      scrollTrigger: { trigger: el, start: 'top 90%', toggleActions: 'play none none none' },
     });
   });
 

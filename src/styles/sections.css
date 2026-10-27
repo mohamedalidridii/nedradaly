@@ -23,7 +23,7 @@ section { position: relative; padding: clamp(96px, 16vh, 200px) var(--gutter); }
 .hero__scroll i::after { content: ''; position: absolute; inset: 0; background: var(--accent); animation: drip 2.2s var(--ease) infinite; }
 @keyframes drip { 0% { transform: translateY(-100%); } 60%, 100% { transform: translateY(100%); } }
 .hero__sig {
-  position: absolute; right: var(--gutter); top: 50%; writing-mode: vertical-rl; font-family: var(--serif); font-style: italic;
+  position: absolute; right: calc(var(--gutter) + 44px); top: 50%; writing-mode: vertical-rl; font-family: var(--serif); font-style: italic;
   font-size: 1rem; color: var(--moss); letter-spacing: 0.04em;
 }
 
